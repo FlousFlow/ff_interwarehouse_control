@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Warehouse access management on the Users form (manager only). -->
+        <record id="ff_res_users_form" model="ir.ui.view">
+            <field name="name">res.users.ff.interwarehouse.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Warehouse Access" name="ff_interwarehouse_access"
+                          groups="ff_interwarehouse_control.group_interwarehouse_manager,base.group_system">
+                        <group>
+                            <group>
+                                <field name="warehouse_restriction_enabled"/>
+                            </group>
+                            <group>
+                                <field name="allowed_warehouse_ids" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

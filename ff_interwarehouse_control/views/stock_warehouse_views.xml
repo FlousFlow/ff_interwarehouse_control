@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="ff_stock_warehouse_form" model="ir.ui.view">
+            <field name="name">stock.warehouse.ff.interwarehouse.form</field>
+            <field name="model">stock.warehouse</field>
+            <field name="inherit_id" ref="stock.view_warehouse"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Inter-Warehouse Control" name="ff_interwarehouse_control">
+                        <group>
+                            <group>
+                                <field name="ff_interwarehouse_responsible_user_ids" widget="many2many_tags"/>
+                                <field name="ff_dispatch_picking_type_id" readonly="1"/>
+                                <field name="ff_receipt_picking_type_id" readonly="1"/>
+                            </group>
+                            <group>
+                                <button name="action_open_ff_outgoing_lanes" type="object"
+                                        class="oe_stat_button" icon="fa-sign-out" string="Outgoing Lanes">
+                                    <field name="ff_interwarehouse_outgoing_lane_count" widget="statinfo"/>
+                                </button>
+                                <button name="action_open_ff_incoming_lanes" type="object"
+                                        class="oe_stat_button" icon="fa-sign-in" string="Incoming Lanes">
+                                    <field name="ff_interwarehouse_incoming_lane_count" widget="statinfo"/>
+                                </button>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

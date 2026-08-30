@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="ff_resolve_wizard_form" model="ir.ui.view">
+            <field name="name">ff.interwarehouse.resolve.wizard.form</field>
+            <field name="model">ff.interwarehouse.resolve.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Resolve Transit Difference">
+                    <group>
+                        <group>
+                            <field name="transfer_id"/>
+                            <field name="responsible_user_id"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                        </group>
+                    </group>
+                    <field name="line_ids">
+                        <list string="In-transit difference" editable="bottom">
+                            <field name="product_id" readonly="1"/>
+                            <field name="product_uom_id" readonly="1"/>
+                            <field name="in_transit_qty" readonly="1"/>
+                            <field name="qty"/>
+                            <field name="reason"/>
+                            <field name="note"/>
+                        </list>
+                    </field>
+                    <footer>
+                        <button name="action_scrap" type="object" string="Create Scrap" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

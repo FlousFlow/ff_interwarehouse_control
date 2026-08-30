@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- ==================================================================
+             Restricted Warehouse User - real security via ir.rule (not view
+             domains). Every rule is ANDed with the standard stock multi-company
+             rules, and FAILS CLOSED: an empty "Allowed Warehouses" list hides
+             every warehouse stock.
+
+             The user reference in the domains gives access to the current
+             user's res.users record (allowed_warehouse_ids).
+             ================================================================== -->
+
+        <!-- stock.warehouse -->
+        <record id="ff_rule_stock_warehouse" model="ir.rule">
+            <field name="name">Inter-Warehouse: warehouse visible only if allowed</field>
+            <field name="model_id" ref="stock.model_stock_warehouse"/>
+            <field name="groups" eval="[(4, ref('group_restricted_warehouse_user'))]"/>
+            <field name="domain_force">[('id', 'in', user.allowed_warehouse_ids.ids)]</field>
+        </record>
+
+        <!-- stock.location: own warehouse subtree + own lane transits + global
+             shared locations (virtual counterpart locations, company-less roots) -->
+        <record id="ff_rule_stock_location" model="ir.rule">
+            <field name="name">Inter-Warehouse: location visible only if it belongs to an allowed warehouse or an allowed lane</field>
+            <field name="model_id" ref="stock.model_stock_location"/>
+            <field name="groups" eval="[(4, ref('group_restricted_warehouse_user'))]"/>
+            <field name="domain_force">[
+                '|', '|', '|', '|',
+                ('id', 'child_of', user.allowed_warehouse_ids.view_location_id.ids),
+                ('ff_interwarehouse_lane_id.source_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('ff_interwarehouse_lane_id.destination_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('company_id', '=', False),
+                ('usage', 'in', ('supplier', 'customer', 'inventory', 'production')),
+            ]</field>
+        </record>
+
+        <!-- stock.quant: only quants in allowed warehouses / allowed lane transits -->
+        <record id="ff_rule_stock_quant" model="ir.rule">
+            <field name="name">Inter-Warehouse: quant visible only if its location is allowed</field>
+            <field name="model_id" ref="stock.model_stock_quant"/>
+            <field name="groups" eval="[(4, ref('group_restricted_warehouse_user'))]"/>
+            <field name="domain_force">[
+                '|', '|',
+                ('location_id', 'child_of', user.allowed_warehouse_ids.view_location_id.ids),
+                ('location_id.ff_interwarehouse_lane_id.source_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('location_id.ff_interwarehouse_lane_id.destination_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+            ]</field>
+        </record>
+
+        <!-- stock.picking: own warehouse operations + inter-warehouse pickings
+             where the user is a party (source or destination) -->
+        <record id="ff_rule_stock_picking" model="ir.rule">
+            <field name="name">Inter-Warehouse: picking visible only for an allowed warehouse or an inter-warehouse transfer the user is part of</field>
+            <field name="model_id" ref="stock.model_stock_picking"/>
+            <field name="groups" eval="[(4, ref('group_restricted_warehouse_user'))]"/>
+            <field name="domain_force">[
+                '|', '|',
+                ('picking_type_id.warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('ff_source_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('ff_destination_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+            ]</field>
+        </record>
+
+        <!-- stock.picking.type -->
+        <record id="ff_rule_stock_picking_type" model="ir.rule">
+            <field name="name">Inter-Warehouse: operation type visible only for an allowed warehouse</field>
+            <field name="model_id" ref="stock.model_stock_picking_type"/>
+            <field name="groups" eval="[(4, ref('group_restricted_warehouse_user'))]"/>
+            <field name="domain_force">[('warehouse_id', 'in', user.allowed_warehouse_ids.ids)]</field>
+        </record>
+
+        <!-- stock.move -->
+        <record id="ff_rule_stock_move" model="ir.rule">
+            <field name="name">Inter-Warehouse: move visible only for an allowed picking/warehouse or an allowed lane transit</field>
+            <field name="model_id" ref="stock.model_stock_move"/>
+            <field name="groups" eval="[(4, ref('group_restricted_warehouse_user'))]"/>
+            <field name="domain_force">[
+                '|', '|', '|', '|', '|', '|',
+                ('picking_id.picking_type_id.warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('location_id', 'child_of', user.allowed_warehouse_ids.view_location_id.ids),
+                ('location_dest_id', 'child_of', user.allowed_warehouse_ids.view_location_id.ids),
+                ('location_id.ff_interwarehouse_lane_id.source_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('location_id.ff_interwarehouse_lane_id.destination_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('location_dest_id.ff_interwarehouse_lane_id.source_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('location_dest_id.ff_interwarehouse_lane_id.destination_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+            ]</field>
+        </record>
+
+        <!-- stock.move.line -->
+        <record id="ff_rule_stock_move_line" model="ir.rule">
+            <field name="name">Inter-Warehouse: move line visible only for an allowed picking/warehouse or an allowed lane transit</field>
+            <field name="model_id" ref="stock.model_stock_move_line"/>
+            <field name="groups" eval="[(4, ref('group_restricted_warehouse_user'))]"/>
+            <field name="domain_force">[
+                '|', '|', '|', '|', '|', '|',
+                ('picking_id.picking_type_id.warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('location_id', 'child_of', user.allowed_warehouse_ids.view_location_id.ids),
+                ('location_dest_id', 'child_of', user.allowed_warehouse_ids.view_location_id.ids),
+                ('location_id.ff_interwarehouse_lane_id.source_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('location_id.ff_interwarehouse_lane_id.destination_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('location_dest_id.ff_interwarehouse_lane_id.source_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('location_dest_id.ff_interwarehouse_lane_id.destination_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+            ]</field>
+        </record>
+
+        <!-- stock.scrap -->
+        <record id="ff_rule_stock_scrap" model="ir.rule">
+            <field name="name">Inter-Warehouse: scrap visible only for an allowed location</field>
+            <field name="model_id" ref="stock.model_stock_scrap"/>
+            <field name="groups" eval="[(4, ref('group_restricted_warehouse_user'))]"/>
+            <field name="domain_force">[
+                '|', '|',
+                ('location_id', 'child_of', user.allowed_warehouse_ids.view_location_id.ids),
+                ('location_id.ff_interwarehouse_lane_id.source_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('location_id.ff_interwarehouse_lane_id.destination_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+            ]</field>
+        </record>
+
+        <!-- ff.interwarehouse.lane -->
+        <record id="ff_rule_lane" model="ir.rule">
+            <field name="name">Inter-Warehouse: lane visible only if the user is source or destination</field>
+            <field name="model_id" ref="model_ff_interwarehouse_lane"/>
+            <field name="groups" eval="[(4, ref('group_restricted_warehouse_user'))]"/>
+            <field name="domain_force">[
+                '|',
+                ('source_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('destination_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+            ]</field>
+        </record>
+
+        <!-- ff.interwarehouse.transfer -->
+        <record id="ff_rule_transfer" model="ir.rule">
+            <field name="name">Inter-Warehouse: transfer visible only if the user is source or destination</field>
+            <field name="model_id" ref="model_ff_interwarehouse_transfer"/>
+            <field name="groups" eval="[(4, ref('group_restricted_warehouse_user'))]"/>
+            <field name="domain_force">[
+                '|',
+                ('source_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('destination_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+            ]</field>
+        </record>
+
+        <!-- ff.interwarehouse.transfer.line -->
+        <record id="ff_rule_transfer_line" model="ir.rule">
+            <field name="name">Inter-Warehouse: transfer line visible only if its transfer is visible</field>
+            <field name="model_id" ref="model_ff_interwarehouse_transfer_line"/>
+            <field name="groups" eval="[(4, ref('group_restricted_warehouse_user'))]"/>
+            <field name="domain_force">[
+                '|',
+                ('transfer_id.source_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+                ('transfer_id.destination_warehouse_id', 'in', user.allowed_warehouse_ids.ids),
+            ]</field>
+        </record>
+
+    </data>
+</odoo>

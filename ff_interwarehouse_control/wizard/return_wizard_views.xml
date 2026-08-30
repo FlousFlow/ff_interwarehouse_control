@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="ff_return_wizard_form" model="ir.ui.view">
+            <field name="name">ff.interwarehouse.return.wizard.form</field>
+            <field name="model">ff.interwarehouse.return.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Return to Source">
+                    <group>
+                        <group>
+                            <field name="transfer_id"/>
+                        </group>
+                    </group>
+                    <field name="line_ids">
+                        <list string="Products to return" editable="bottom">
+                            <field name="product_id" readonly="1"/>
+                            <field name="product_uom_id" readonly="1"/>
+                            <field name="in_transit_qty" readonly="1"/>
+                            <field name="qty"/>
+                        </list>
+                    </field>
+                    <footer>
+                        <button name="action_return" type="object" string="Return to Source" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

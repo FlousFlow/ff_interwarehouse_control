@@ -1,0 +1,78 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan">Inter-Warehouse Control</h2>
+            <h3 class="oe_slogan">Inter-warehouse transfers through lane transit locations + real per-warehouse user security for Odoo 18 Community</h3>
+        </div>
+        <div class="oe_span12">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="banner.png"/>
+            </div>
+        </div>
+        <div class="oe_span12">
+            <p>Production-ready Odoo 18 Community module to manage transfers between warehouses and to isolate stock users by warehouse
+            using <b>ACL + ir.rule</b> (real security, not view domains).</p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Key features</h2>
+        <div class="oe_span6">
+            <div class="oe_row_img oe_centered">
+                <ul>
+                    <li>Directed lanes: <code>Cairo → Alexandria</code> ≠ <code>Alexandria → Cairo</code>.</li>
+                    <li>Lane-specific transit location: <code>A/Stock → Transit A→B → B/Stock</code>.</li>
+                    <li>Clear audit trail: Requested / Dispatched / Received / Pending Dispatch / In Transit.</li>
+                    <li>Standard Odoo backorders for partial dispatch and partial receipt.</li>
+                    <li>No silent quantity changes - no automatic scrap or return.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="oe_span6">
+            <div class="oe_row_img oe_centered">
+                <ul>
+                    <li>Real warehouse security with <code>ir.rule</code> (stock.warehouse, location, quant, picking, move, move.line, picking.type, scrap).</li>
+                    <li>Warehouse-scoped product quantities on the product form (qty_available, free_qty, incoming, outgoing, virtual).</li>
+                    <li>Fail-closed: empty allowed list = no warehouse stock visible.</li>
+                    <li>Multi-company safe and idempotent automatic warehouse setup.</li>
+                    <li>Global Warehouse Manager bypass group.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Installation</h2>
+        <div class="oe_span12">
+            <p>Copy <code>ff_interwarehouse_control</code> into your addons path, restart Odoo and install the module.
+            On install the module discovers all existing warehouses and creates every missing lane and operation type (idempotent).</p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Usage</h2>
+        <div class="oe_span12">
+            <ul>
+                <li><b>Send:</b> Inventory → Operations → Inter-Warehouse Transfers → New → choose lane → add products → Confirm → validate the dispatch picking.</li>
+                <li><b>Receive:</b> the destination user validates the automatically-created receipt picking. Partial receipt creates a standard backorder.</li>
+                <li><b>Difference:</b> Return to Source, or Resolve Difference (scrap) for the manager.</li>
+                <li><b>Restrict a user:</b> Settings → Users → user → Warehouse Access → enable restriction and select allowed warehouses (managers only).</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">License</h2>
+        <div class="oe_span12">
+            <p>LGPL-3</p>
+        </div>
+    </div>
+</section>

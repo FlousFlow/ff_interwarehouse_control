@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_interwarehouse_transfer"
+                  name="Inter-Warehouse Transfers"
+                  parent="stock.menu_stock_warehouse_mgmt"
+                  action="ff_action_interwarehouse_transfer"
+                  sequence="2"/>
+
+        <menuitem id="menu_interwarehouse_lane"
+                  name="Inter-Warehouse Lanes"
+                  parent="stock.menu_warehouse_config"
+                  action="ff_action_interwarehouse_lane"
+                  groups="ff_interwarehouse_control.group_interwarehouse_manager,stock.group_stock_manager"
+                  sequence="5"/>
+
+    </data>
+</odoo>

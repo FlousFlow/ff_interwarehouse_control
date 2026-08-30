@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Show the inter-warehouse link on picking forms so both parties can
+             follow a transfer without exposing the other warehouse. -->
+        <record id="ff_stock_picking_form" model="ir.ui.view">
+            <field name="name">stock.picking.ff.interwarehouse.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <field name="ff_interwarehouse_role" invisible="1"/>
+                    <field name="ff_interwarehouse_transfer_id" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

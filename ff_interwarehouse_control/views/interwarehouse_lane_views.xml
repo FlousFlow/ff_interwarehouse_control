@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="ff_interwarehouse_lane_tree" model="ir.ui.view">
+            <field name="name">ff.interwarehouse.lane.tree</field>
+            <field name="model">ff.interwarehouse.lane</field>
+            <field name="arch" type="xml">
+                <list string="Inter-Warehouse Lanes" editable="bottom">
+                    <field name="name"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="source_warehouse_id"/>
+                    <field name="destination_warehouse_id"/>
+                    <field name="transit_location_id" readonly="1"/>
+                    <field name="active"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="ff_interwarehouse_lane_form" model="ir.ui.view">
+            <field name="name">ff.interwarehouse.lane.form</field>
+            <field name="model">ff.interwarehouse.lane</field>
+            <field name="arch" type="xml">
+                <form string="Inter-Warehouse Lane">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1><field name="name" readonly="1"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                                <field name="source_warehouse_id"/>
+                                <field name="destination_warehouse_id"/>
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <field name="transit_location_id" readonly="1"/>
+                                <field name="source_name" readonly="1"/>
+                                <field name="destination_name" readonly="1"/>
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ff_interwarehouse_lane_search" model="ir.ui.view">
+            <field name="name">ff.interwarehouse.lane.search</field>
+            <field name="model">ff.interwarehouse.lane</field>
+            <field name="arch" type="xml">
+                <search string="Inter-Warehouse Lanes">
+                    <field name="source_warehouse_id"/>
+                    <field name="destination_warehouse_id"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_source" string="Source" context="{'group_by': 'source_warehouse_id'}"/>
+                        <filter name="group_destination" string="Destination" context="{'group_by': 'destination_warehouse_id'}"/>
+                        <filter name="group_company" string="Company" context="{'group_by': 'company_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="ff_action_interwarehouse_lane" model="ir.actions.act_window">
+            <field name="name">Inter-Warehouse Lanes</field>
+            <field name="res_model">ff.interwarehouse.lane</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="ff_interwarehouse_lane_search"/>
+        </record>
+
+    </data>
+</odoo>

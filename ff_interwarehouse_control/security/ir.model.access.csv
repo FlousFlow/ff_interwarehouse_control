@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ff_lane_user,ff.interwarehouse.lane user,model_ff_interwarehouse_lane,stock.group_stock_user,1,1,1,0
+access_ff_lane_manager,ff.interwarehouse.lane manager,model_ff_interwarehouse_lane,group_interwarehouse_manager,1,1,1,1
+access_ff_transfer_user,ff.interwarehouse.transfer user,model_ff_interwarehouse_transfer,stock.group_stock_user,1,1,1,0
+access_ff_transfer_manager,ff.interwarehouse.transfer manager,model_ff_interwarehouse_transfer,group_interwarehouse_manager,1,1,1,1
+access_ff_transfer_line_user,ff.interwarehouse.transfer.line user,model_ff_interwarehouse_transfer_line,stock.group_stock_user,1,1,1,1
+access_ff_transfer_line_manager,ff.interwarehouse.transfer.line manager,model_ff_interwarehouse_transfer_line,group_interwarehouse_manager,1,1,1,1
+access_ff_partial_reason_wizard_user,ff partial reason wizard user,model_ff_interwarehouse_partial_reason_wizard,stock.group_stock_user,1,1,1,1
+access_ff_partial_reason_wizard_line_user,ff partial reason wizard line user,model_ff_interwarehouse_partial_reason_wizard_line,stock.group_stock_user,1,1,1,1
+access_ff_return_wizard_user,ff return wizard user,model_ff_interwarehouse_return_wizard,stock.group_stock_user,1,1,1,1
+access_ff_return_wizard_line_user,ff return wizard line user,model_ff_interwarehouse_return_wizard_line,stock.group_stock_user,1,1,1,1
+access_ff_resolve_wizard_manager,ff resolve wizard manager,model_ff_interwarehouse_resolve_wizard,group_interwarehouse_manager,1,1,1,1
+access_ff_resolve_wizard_line_manager,ff resolve wizard line manager,model_ff_interwarehouse_resolve_wizard_line,group_interwarehouse_manager,1,1,1,1

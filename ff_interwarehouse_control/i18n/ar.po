@@ -1,0 +1,1460 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-30 14:30+0000\n"
+"PO-Revision-Date: 2026-08-30 14:30+0000\n"
+"Last-Translator: Flous Flow <https://flousflow.com>\n"
+"Language-Team: Arabic (ar)\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "%s (inter-warehouse dispatch)"
+msgstr "%s (شحن بين المخازن)"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "%s (inter-warehouse receipt)"
+msgstr "%s (استلام بين المخازن)"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/wizard/return_wizard.py:0
+msgid "%s (return to source)"
+msgstr "%s (رجوع إلى المصدر)"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "%s: Dispatched %s / Received %s"
+msgstr "%s: تم الشحن %s / تم الاستلام %s"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_lane.py:0
+#: model:ir.model.constraint,message:ff_interwarehouse_control.constraint_ff_interwarehouse_lane_lane_uniq
+msgid "A lane already exists for this source/destination pair."
+msgstr "يوجد خط بالفعل لهذا الزوج من المصدر والوجهة."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/wizard/partial_receipt_wizard.py:0
+msgid "A reason is required for every partially received product."
+msgstr "سبب مطلوب لكل منتج تم استلامه جزئيًا."
+
+#. module: ff_interwarehouse_control
+#: model:res.groups,comment:ff_interwarehouse_control.group_restricted_warehouse_user
+msgid ""
+"A stock user with this group only sees the stock of the warehouses listed in"
+" their \"Allowed Warehouses\" (enforced with record rules, not view "
+"domains). Fail-closed: empty allowed list = no warehouse stock visible."
+msgstr ""
+"مستخدم مخزون ضمن هذه المجموعة يرى فقط مخزون المخازن المدرجة في \"المخازن "
+"المسموحة\" (يُطبَّق بقواعد السجلات وليس بترشيح الشاشات). إغلاق آمن: قائمة "
+"مسموحة فارغة = لا يظهر أي مخزون مخازن."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تنسيق استثناء النشاط"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Add internal notes..."
+msgstr "أضف ملاحظات داخلية..."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_res_users__allowed_warehouse_ids
+msgid "Allowed Warehouses"
+msgstr "المخازن المسموحة"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/res_users.py:0
+msgid "Allowed warehouses must belong to the user's allowed companies."
+msgstr "يجب أن تنتمي المخازن المسموحة إلى شركات المستخدم المسموحة."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "An inter-warehouse lane is required."
+msgstr "خط نقل بين المخازن مطلوب."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_res_config_settings__ff_auto_create_lanes
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid "Auto-create Lanes for New Warehouses"
+msgstr "إنشاء الخطوط تلقائيًا للمخازن الجديدة"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid "Automatic Warehouse Setup"
+msgstr "الإعداد التلقائي للمخازن"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid ""
+"Automatically discover warehouses and create the missing inter-warehouse "
+"lanes and operation types (idempotent)."
+msgstr ""
+"اكتشاف المخازن تلقائيًا وإنشاء خطوط النقل وأنواع التشغيل الناقصة بين المخازن"
+" (قابل للتكرار بأمان)."
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_partial_reason_wizard_form
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_resolve_wizard_form
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_return_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer__state__cancelled
+msgid "Cancelled"
+msgstr "ملغى"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__company_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__company_id
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_lane_search
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "Company"
+msgstr "الشركة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__completion_date
+msgid "Completion Date"
+msgstr "تاريخ الإنجاز"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات النظام"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer__state__confirmed
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_partial_reason_wizard_line__reason__counting_difference
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_resolve_wizard_line__reason__counting_difference
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer_line__partial_receipt_reason__counting_difference
+msgid "Counting difference"
+msgstr "فرق عد"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_resolve_wizard_form
+msgid "Create Scrap"
+msgstr "إنشاء سكراب"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__create_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard__create_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__create_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard__create_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__create_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard__create_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__create_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__create_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__create_uid
+msgid "Created by"
+msgstr "أنشأه"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__create_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard__create_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__create_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard__create_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__create_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard__create_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__create_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__create_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__create_date
+msgid "Created on"
+msgstr "أُنشئ في"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_lane.py:0
+msgid "Cross-company lanes are not allowed."
+msgstr "الخطوط بين الشركات غير مسموحة."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_partial_reason_wizard_line__reason__damaged_in_transit
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_resolve_wizard_line__reason__damaged_in_transit
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer_line__partial_receipt_reason__damaged_in_transit
+msgid "Damaged in transit"
+msgstr "تالف أثناء النقل"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__destination_name
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__destination_name
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_lane_search
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "Destination"
+msgstr "الوجهة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__destination_warehouse_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__destination_warehouse_id
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Destination Warehouse"
+msgstr "مخزن الوجهة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__stock_picking__ff_interwarehouse_role__dispatch
+msgid "Dispatch"
+msgstr "شحن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__dispatch_date
+msgid "Dispatch Date"
+msgstr "تاريخ الشحن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__dispatched_qty
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__dispatched_qty_total
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_tree
+msgid "Dispatched"
+msgstr "تم الشحن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__dispatched_qty
+msgid "Dispatched Qty"
+msgstr "كمية الشحن"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__dispatch_picking_ids
+msgid "Dispatches"
+msgstr "الشحنات"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__display_name
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard__display_name
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__display_name
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard__display_name
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__display_name
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard__display_name
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__display_name
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__display_name
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer__state__done
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "Done"
+msgstr "تم"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_res_config_settings__ff_enable_auto_setup
+msgid "Enable Automatic Warehouse Setup"
+msgstr "تفعيل الإعداد التلقائي للمخازن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_res_config_settings__ff_enable_partial_receipt_notifications
+msgid "Enable Partial Receipt Notifications"
+msgstr "تفعيل إشعارات الاستلام الجزئي"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,help:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome مثل fa-tasks"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_lane_search
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard__id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard__id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard__id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/wizard/resolve_transit_wizard.py:0
+msgid "IWT %s - %s"
+msgstr "نقل بين المخازن %s - %s"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_stock_picking__ff_destination_warehouse_id
+msgid "IWT Destination Warehouse"
+msgstr "مخزن وجهة النقل"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_stock_picking__ff_lane_id
+msgid "IWT Lane"
+msgstr "خط النقل"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_stock_picking__ff_source_warehouse_id
+msgid "IWT Source Warehouse"
+msgstr "مخزن مصدر النقل"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,help:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للدلالة على نشاط استثنائي."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,help:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم التحديد، تتطلب الرسائل الجديدة انتباهك."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,help:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_has_error
+#: model:ir.model.fields,help:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم التحديد، بعض الرسائل بها خطأ في التسليم."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__in_transit_qty
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__in_transit_qty
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__in_transit_qty
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__in_transit_qty_total
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__in_transit_qty
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer__state__in_transit
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_tree
+msgid "In Transit"
+msgstr "في الطريق"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_resolve_wizard_form
+msgid "In-transit difference"
+msgstr "فرق في الطريق"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "Incoming"
+msgstr "وارد"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "Incoming Inter-Warehouse Transfer: %s"
+msgstr "نقل وارد بين المخازن: %s"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/stock_warehouse.py:0
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_stock_warehouse__ff_interwarehouse_incoming_lane_count
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_stock_warehouse_form
+msgid "Incoming Lanes"
+msgstr "الخطوط الواردة"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"Incoming inter-warehouse transfer %s from %s to %s has been dispatched. "
+"Please validate the receipt."
+msgstr ""
+"تم شحن النقل الوارد بين المخازن %s من %s إلى %s. يرجى اعتماد الاستلام."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__initiator_user_id
+msgid "Initiator"
+msgstr "البادئ"
+
+#. module: ff_interwarehouse_control
+#: model:res.groups,name:ff_interwarehouse_control.group_interwarehouse_manager
+msgid "Inter-Warehouse / Global Warehouse Manager"
+msgstr "نقل بين المخازن / مدير مخازن عام"
+
+#. module: ff_interwarehouse_control
+#: model:res.groups,name:ff_interwarehouse_control.group_restricted_warehouse_user
+msgid "Inter-Warehouse / Restricted Warehouse User"
+msgstr "نقل بين المخازن / مستخدم مخازن مقيّد"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_stock_warehouse_form
+msgid "Inter-Warehouse Control"
+msgstr "التحكم في النقل بين المخازن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_stock_warehouse__ff_dispatch_picking_type_id
+msgid "Inter-Warehouse Dispatch Type"
+msgstr "نوع شحن بين المخازن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_ff_interwarehouse_lane
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__lane_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_stock_location__ff_interwarehouse_lane_id
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_lane_form
+msgid "Inter-Warehouse Lane"
+msgstr "خط نقل بين المخازن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.actions.act_window,name:ff_interwarehouse_control.ff_action_interwarehouse_lane
+#: model:ir.ui.menu,name:ff_interwarehouse_control.menu_interwarehouse_lane
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_lane_search
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_lane_tree
+msgid "Inter-Warehouse Lanes"
+msgstr "خطوط النقل بين المخازن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_stock_warehouse__ff_receipt_picking_type_id
+msgid "Inter-Warehouse Receipt Type"
+msgstr "نوع استلام بين المخازن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_stock_warehouse__ff_interwarehouse_responsible_user_ids
+msgid "Inter-Warehouse Responsible Users"
+msgstr "المستخدمون المسؤولون عن النقل بين المخازن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_stock_picking__ff_interwarehouse_role
+msgid "Inter-Warehouse Role"
+msgstr "دور النقل بين المخازن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_ff_interwarehouse_transfer
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_stock_picking__ff_interwarehouse_transfer_id
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Inter-Warehouse Transfer"
+msgstr "نقل بين المخازن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_ff_interwarehouse_transfer_line
+msgid "Inter-Warehouse Transfer Line"
+msgstr "سطر نقل بين المخازن"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_lane.py:0
+#: model:ir.actions.act_window,name:ff_interwarehouse_control.ff_action_interwarehouse_transfer
+#: model:ir.ui.menu,name:ff_interwarehouse_control.menu_interwarehouse_transfer
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_tree
+msgid "Inter-Warehouse Transfers"
+msgstr "النقل بين المخازن"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/res_company.py:0
+msgid "Inter-Warehouse Transit - %s"
+msgstr "عبور بين المخازن - %s"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_res_company__ff_interwarehouse_transit_root_location_id
+msgid "Inter-Warehouse Transit Root Location"
+msgstr "الموقع الجذري للعبور بين المخازن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_stock_location
+msgid "Inventory Locations"
+msgstr "مواقع المخزون"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_is_follower
+msgid "Is Follower"
+msgstr "هل يتابع"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__name
+msgid "Lane"
+msgstr "الخط"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__write_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard__write_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__write_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard__write_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__write_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard__write_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__write_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__write_uid
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__write_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard__write_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__write_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard__write_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__write_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard__write_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__write_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__write_date
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard__line_ids
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard__line_ids
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__line_ids
+msgid "Lines"
+msgstr "الأسطر"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_resolve_wizard_line__reason__loss
+msgid "Loss"
+msgstr "خسارة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "موعد نشاطي"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "My Responsibility"
+msgstr "مسؤوليتي"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "My Transfers"
+msgstr "تحويلاتي"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "موعد النشاط التالي"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "No pickings to display."
+msgstr "لا توجد شحنات للعرض."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "No products to dispatch."
+msgstr "لا توجد منتجات للشحن."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/wizard/return_wizard.py:0
+msgid "No quantity to return."
+msgstr "لا توجد كمية للإرجاع."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/wizard/resolve_transit_wizard.py:0
+msgid "No transit location to scrap from."
+msgstr "لا يوجد موقع عبور للسكراب منه."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__note
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__notes
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_res_config_settings__ff_notify_destination
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid "Notify Destination Warehouse"
+msgstr "إشعار مخزن الوجهة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_res_config_settings__ff_notify_source_responsible
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid "Notify Source Responsible"
+msgstr "إشعار المسؤول بالمصدر"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,help:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,help:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/res_users.py:0
+msgid ""
+"Only administrators or the Inter-Warehouse Manager can change warehouse "
+"access settings."
+msgstr ""
+"يمكن للمسؤولين أو مدير النقل بين المخازن فقط تغيير إعدادات صلاحيات المخازن."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"Only draft or confirmed (not yet dispatched) transfers can be cancelled. Use"
+" \"Return to Source\" for in-transit quantities."
+msgstr ""
+"يمكن إلغاء التحويلات في حالة المسودة أو المؤكدة (غير المشحونة بعد). استخدم "
+"\"الرجوع إلى المصدر\" للكميات في الطريق."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "Only draft transfers can be confirmed."
+msgstr "يمكن تأكيد التحويلات في حالة المسودة فقط."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "Only draft transfers can be deleted."
+msgstr "يمكن حذف التحويلات في حالة المسودة فقط."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/wizard/resolve_transit_wizard.py:0
+msgid "Only the Inter-Warehouse Manager can create scrap."
+msgstr "يمكن لمدير النقل بين المخازن فقط إنشاء سكراب."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "Only the Inter-Warehouse Manager can resolve transit differences."
+msgstr "يمكن لمدير النقل بين المخازن فقط حل فروق العبور."
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Open Dispatch"
+msgstr "فتح الشحن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_partial_reason_wizard_line__reason__other
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_resolve_wizard_line__reason__other
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer_line__partial_receipt_reason__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/stock_warehouse.py:0
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_stock_warehouse__ff_interwarehouse_outgoing_lane_count
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_stock_warehouse_form
+msgid "Outgoing Lanes"
+msgstr "الخطوط الصادرة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__ff_is_overdue
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Partial Receipt"
+msgstr "استلام جزئي"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__partial_receipt_note
+msgid "Partial Receipt Note"
+msgstr "ملاحظة الاستلام الجزئي"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid "Partial Receipt Notifications"
+msgstr "إشعارات الاستلام الجزئي"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__partial_receipt_reason
+msgid "Partial Receipt Reason"
+msgstr "سبب الاستلام الجزئي"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_ff_interwarehouse_partial_reason_wizard_line
+msgid "Partial Receipt Reason Line"
+msgstr "سطر سبب الاستلام الجزئي"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_partial_reason_wizard_line__reason__partial_delivery
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer_line__partial_receipt_reason__partial_delivery
+msgid "Partial delivery"
+msgstr "تسليم جزئي"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/wizard/partial_receipt_wizard.py:0
+msgid "Partial receipt reason recorded."
+msgstr "تم تسجيل سبب الاستلام الجزئي."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "Partial receipt: %s"
+msgstr "استلام جزئي: %s"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer__state__partially_dispatched
+msgid "Partially Dispatched"
+msgstr "تم الشحن جزئيًا"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer__state__partially_received
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "Partially Received"
+msgstr "تم الاستلام جزئيًا"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_partial_reason_wizard_form
+msgid "Partially received products"
+msgstr "المنتجات المستلمة جزئيًا"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__pending_dispatch_qty
+msgid "Pending Dispatch"
+msgstr "بانتظار الشحن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_partial_reason_wizard_line__reason__physical_shortage
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_resolve_wizard_line__reason__physical_shortage
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__ff_interwarehouse_transfer_line__partial_receipt_reason__physical_shortage
+msgid "Physical shortage"
+msgstr "نقص فعلي"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "Please add at least one product line before confirming."
+msgstr "يرجى إضافة سطر منتج واحد على الأقل قبل التأكيد."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/wizard/resolve_transit_wizard.py:0
+msgid "Please provide a reason for each scrapped product."
+msgstr "يرجى تقديم سبب لكل منتج تم سكرابه."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__product_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__product_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__product_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard__line_ids
+msgid "Products to Return"
+msgstr "المنتجات المراد إرجاعها"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_return_wizard_form
+msgid "Products to return"
+msgstr "منتجات للإرجاع"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"Quantities are updated automatically by the stock engine and cannot be "
+"edited manually."
+msgstr ""
+"يتم تحديث الكميات تلقائيًا بواسطة محرك المخزون ولا يمكن تعديلها يدويًا."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__qty
+msgid "Quantity to Return"
+msgstr "الكمية المراد إرجاعها"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__qty
+msgid "Quantity to Scrap"
+msgstr "الكمية المراد سكرابها"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__reason
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__reason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__stock_picking__ff_interwarehouse_role__receipt
+msgid "Receipt"
+msgstr "استلام"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"Receipt picking %s created for the dispatched quantity. Please ask the "
+"destination warehouse to validate it."
+msgstr ""
+"تم إنشاء شحنة الاستلام %s للكمية المشحونة. يرجى مطالبة مخزن الوجهة "
+"باعتمادها."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__receipt_picking_ids
+msgid "Receipts"
+msgstr "الاستلامات"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Receive"
+msgstr "استلام"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__received_qty
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__received_qty_total
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_tree
+msgid "Received"
+msgstr "تم الاستلام"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__received_qty
+msgid "Received Qty"
+msgstr "كمية الاستلام"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+#: model:ir.model,name:ff_interwarehouse_control.model_ff_interwarehouse_partial_reason_wizard
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_partial_reason_wizard_form
+msgid "Record Partial Receipt Reason"
+msgstr "تسجيل سبب الاستلام الجزئي"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Record Reason"
+msgstr "تسجيل السبب"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__request_date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__requested_qty
+msgid "Requested Qty"
+msgstr "الكمية المطلوبة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_res_config_settings__ff_require_partial_receipt_reason
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid "Require Partial Receipt Reason"
+msgstr "إلزام بسبب الاستلام الجزئي"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Resolve Difference"
+msgstr "حل الفرق"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_resolve_wizard_form
+msgid "Resolve Transit Difference"
+msgstr "حل فرق العبور"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_ff_interwarehouse_resolve_wizard
+msgid "Resolve Transit Difference (Scrap)"
+msgstr "حل فرق العبور (سكراب)"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_ff_interwarehouse_resolve_wizard_line
+msgid "Resolve Transit Difference Line"
+msgstr "سطر حل فرق العبور"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard__responsible_user_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__responsible_user_id
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "Responsible"
+msgstr "المسؤول"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+#: model:ir.model,name:ff_interwarehouse_control.model_ff_interwarehouse_return_wizard
+#: model:ir.model.fields.selection,name:ff_interwarehouse_control.selection__stock_picking__ff_interwarehouse_role__return
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_return_wizard_form
+msgid "Return to Source"
+msgstr "الرجوع إلى المصدر"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_ff_interwarehouse_return_wizard_line
+msgid "Return to Source Line"
+msgstr "سطر الرجوع إلى المصدر"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/wizard/return_wizard.py:0
+msgid "Return to source picking %s created (transit -> %s)."
+msgstr "تم إنشاء شحنة الرجوع إلى المصدر %s (عبور ← %s)."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__returned_qty
+msgid "Returned Qty"
+msgstr "الكمية المرتجعة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__return_picking_ids
+msgid "Returns"
+msgstr "المرتجعات"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسالة النصية"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_partial_reason_wizard_form
+msgid "Save"
+msgstr "حفظ"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__scrapped_qty
+msgid "Scrapped Qty"
+msgstr "الكمية المسكرابة"
+
+#. module: ff_interwarehouse_control
+#: model:res.groups,comment:ff_interwarehouse_control.group_interwarehouse_manager
+msgid ""
+"Sees all warehouses (inside their allowed companies), manages lanes, "
+"resolves transit differences and edits warehouse access of users."
+msgstr ""
+"يرى جميع المخازن (داخل شركاته المسموحة)، ويدير الخطوط، ويحل فروق العبور، "
+"ويعدل صلاحيات المخازن للمستخدمين."
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid ""
+"Send a chatter message and an activity to the initiator when a receipt is "
+"partial."
+msgstr "إرسال رسالة ونشاط للبادئ عند الاستلام الجزئي."
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid ""
+"Send an activity to the destination warehouse responsible users after a "
+"dispatch."
+msgstr "إرسال نشاط للمستخدمين المسؤولين في مخزن الوجهة بعد الشحن."
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid "Send an activity to the source responsible users on completion."
+msgstr "إرسال نشاط للمستخدمين المسؤولين بالمصدر عند الإنجاز."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__source_name
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__source_name
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_lane_search
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "Source"
+msgstr "المصدر"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__source_warehouse_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__source_warehouse_id
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_form
+msgid "Source Warehouse"
+msgstr "مخزن المصدر"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_lane.py:0
+msgid "Source and destination warehouses are required to create a lane."
+msgstr "مخزن المصدر والوجهة مطلوبان لإنشاء الخط."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__state
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,help:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة / متأخر: مضى موعد الاستحقاق / اليوم: موعد النشاط "
+"اليوم / مخطط: أنشطة مستقبلية."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"The destination warehouse has no Inter-Warehouse Receipt operation type. Run"
+" the warehouse setup first."
+msgstr ""
+"مخزن الوجهة ليس لديه نوع تشغيل استلام بين المخازن. شغّل إعداد المخازن أولاً."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"The partial receipt reason can only be recorded after a partial receipt."
+msgstr "يمكن تسجيل سبب الاستلام الجزئي فقط بعد حدوث استلام جزئي."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"The received quantity cannot exceed the quantity currently in transit "
+"(dispatched)."
+msgstr ""
+"لا يمكن أن تتجاوز الكمية المستلمة الكمية الموجودة حاليًا في الطريق "
+"(المشحونة)."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "The requested quantity must be greater than zero."
+msgstr "يجب أن تكون الكمية المطلوبة أكبر من صفر."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"The returned quantity cannot exceed the outstanding in-transit quantity."
+msgstr "لا يمكن أن تتجاوز الكمية المرتجعة الكمية المتبقية في الطريق."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"The scrapped quantity cannot exceed the outstanding in-transit quantity."
+msgstr "لا يمكن أن تتجاوز الكمية المسكرابة الكمية المتبقية في الطريق."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "The source and destination warehouses must be different."
+msgstr "يجب أن يختلف مخزن المصدر عن مخزن الوجهة."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_lane.py:0
+#: model:ir.model.constraint,message:ff_interwarehouse_control.constraint_ff_interwarehouse_lane_lane_source_dest_diff
+msgid "The source and destination warehouses of a lane cannot be the same."
+msgstr "لا يمكن أن يتطابق مخزن المصدر والوجهة لنفس الخط."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"The source warehouse has no Inter-Warehouse Dispatch operation type. Run the"
+" warehouse setup first."
+msgstr ""
+"مخزن المصدر ليس لديه نوع تشغيل شحن بين المخازن. شغّل إعداد المخازن أولاً."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/wizard/return_wizard.py:0
+msgid ""
+"The source warehouse has no Inter-Warehouse Receipt operation type. Run the "
+"warehouse setup first."
+msgstr ""
+"مخزن المصدر ليس لديه نوع تشغيل استلام بين المخازن. شغّل إعداد المخازن أولاً."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"The source/destination warehouse of a transfer cannot be changed after "
+"confirmation."
+msgstr "لا يمكن تغيير مخزن المصدر/الوجهة للتحويل بعد التأكيد."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "There is no in-transit quantity to return."
+msgstr "لا توجد كمية في الطريق لإرجاعها."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "There is no transit difference to resolve in the current state."
+msgstr "لا يوجد فرق عبور لحله في الحالة الحالية."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "There is nothing to return in the current state."
+msgstr "لا يوجد شيء لإرجاعه في الحالة الحالية."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_lane.py:0
+msgid ""
+"This lane cannot be %s because it is referenced by inter-warehouse "
+"transfers. Archive the lane instead."
+msgstr ""
+"لا يمكن %s هذا الخط لأنه مرجع بواسطة نقل بين المخازن. قم بأرشفة الخط بدلاً "
+"من ذلك."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_lane.py:0
+msgid ""
+"This lane cannot be %s because its transit location still has stock or "
+"movement history. Archive the lane instead."
+msgstr ""
+"لا يمكن %s هذا الخط لأن موقع العبور به مخزون أو سجل حركات. قم بأرشفة الخط "
+"بدلاً من ذلك."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/stock_location.py:0
+msgid ""
+"This transit location cannot be deleted because it has stock or movement "
+"history. Archive the lane instead."
+msgstr ""
+"لا يمكن حذف موقع العبور هذا لأنه به مخزون أو سجل حركات. قم بأرشفة الخط بدلاً"
+" من ذلك."
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_interwarehouse_transfer_search
+msgid "To Dispatch"
+msgstr "للشحن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_stock_picking
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard__transfer_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard__transfer_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard__transfer_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__transfer_id
+msgid "Transfer"
+msgstr "تحويل"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "Transfer %s cancelled."
+msgstr "تم إلغاء التحويل %s."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "Transfer %s confirmed. Dispatch picking created."
+msgstr "تم تأكيد التحويل %s. تم إنشاء شحنة الشحن."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "Transfer %s fully received by %s. Status: Done."
+msgstr "تم استلام التحويل %s بالكامل بواسطة %s. الحالة: تم."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"Transfer %s has already been dispatched and cannot be cancelled. Use "
+"\"Return to Source\" to handle in-transit quantities."
+msgstr ""
+"تم شحن التحويل %s بالفعل ولا يمكن إلغاؤه. استخدم \"الرجوع إلى المصدر\" "
+"للتعامل مع الكميات في الطريق."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"Transfer %s was only partially received.\n"
+"%s\n"
+"Outstanding quantity remains in transit."
+msgstr ""
+"تم استلام التحويل %s جزئيًا فقط.\n"
+"%s\n"
+"الكمية المتبقية لا تزال في الطريق."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__line_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__line_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__line_id
+msgid "Transfer Line"
+msgstr "سطر التحويل"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"Transfer lines cannot be edited once the transfer has been dispatched. "
+"Create a new transfer instead."
+msgstr ""
+"لا يمكن تعديل أسطر التحويل بعد شحنه. أنشئ تحويلاً جديدًا بدلاً من ذلك."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid ""
+"Transfer lines cannot be removed once the transfer has been dispatched."
+msgstr "لا يمكن حذف أسطر التحويل بعد شحنه."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_lane.py:0
+msgid "Transit %s → %s"
+msgstr "عبور %s ← %s"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_lane__transit_location_id
+msgid "Transit Location"
+msgstr "موقع العبور"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_lane.py:0
+msgid "Transit Stock: %s"
+msgstr "مخزون العبور: %s"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/wizard/resolve_transit_wizard.py:0
+msgid "Transit difference resolved by scrapping %s on %s (responsible: %s)."
+msgstr "تم حل فرق العبور بسكراب %s في %s (المسؤول: %s)."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,help:ff_interwarehouse_control.field_ff_interwarehouse_transfer__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء على السجل."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__product_uom_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__product_uom_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer_line__product_uom_id
+msgid "Unit of Measure"
+msgstr "وحدة القياس"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_res_users
+msgid "User"
+msgstr "المستخدم"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model,name:ff_interwarehouse_control.model_stock_warehouse
+msgid "Warehouse"
+msgstr "المخزن"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/stock_warehouse.py:0
+msgid ""
+"Warehouse %s cannot be archived while inter-warehouse transfers are still "
+"open."
+msgstr "لا يمكن أرشفة المخزن %s بينما توجد نقلات بين المخازن مفتوحة."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/stock_warehouse.py:0
+msgid ""
+"Warehouse %s cannot be archived while there is stock in transit on its "
+"lanes."
+msgstr "لا يمكن أرشفة المخزن %s بينما يوجد مخزون في الطريق على خطوطه."
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_users_form
+msgid "Warehouse Access"
+msgstr "صلاحيات المخازن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_res_users__warehouse_restriction_enabled
+msgid "Warehouse Restriction Enabled"
+msgstr "تفعيل تقييد المخزن"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_transfer__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,help:ff_interwarehouse_control.field_ff_interwarehouse_transfer__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع"
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid ""
+"When a new warehouse is created, automatically create its lanes with every "
+"other warehouse of the same company."
+msgstr "عند إنشاء مخزن جديد، يتم إنشاء خطوطه تلقائيًا مع كل مخازن نفس الشركة."
+
+#. module: ff_interwarehouse_control
+#: model_terms:ir.ui.view,arch_db:ff_interwarehouse_control.ff_res_config_settings_view_form
+msgid ""
+"When enabled, a reason must be provided before saving the partial receipt "
+"reason wizard."
+msgstr "عند التفعيل، يجب تقديم سبب قبل حفظ معالج سبب الاستلام الجزئي."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,help:ff_interwarehouse_control.field_res_users__warehouse_restriction_enabled
+msgid ""
+"When enabled, this user only sees stock of the warehouses listed below "
+"(stock.warehouse, locations, quants, pickings, moves, operation types)."
+msgstr ""
+"عند التفعيل، يرى هذا المستخدم مخزون المخازن المدرجة أدناه فقط (المخازن "
+"والمواقع والأرصدة والشحنات والحركات وأنواع التشغيل)."
+
+#. module: ff_interwarehouse_control
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_partial_reason_wizard_line__wizard_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_resolve_wizard_line__wizard_id
+#: model:ir.model.fields,field_description:ff_interwarehouse_control.field_ff_interwarehouse_return_wizard_line__wizard_id
+msgid "Wizard"
+msgstr "معالج"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_transfer.py:0
+msgid "You are not allowed to initiate a transfer from this warehouse."
+msgstr "غير مسموح لك ببدء نقل من هذا المخزن."
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_lane.py:0
+msgid "archived"
+msgstr "مؤرشف"
+
+#. module: ff_interwarehouse_control
+#. odoo-python
+#: code:addons/ff_interwarehouse_control/models/interwarehouse_lane.py:0
+msgid "delete"
+msgstr "حذف"

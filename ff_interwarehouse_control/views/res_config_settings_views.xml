@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="ff_res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.ff.interwarehouse.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//app[@name='stock']" position="inside">
+                    <block title="Inter-Warehouse Control" name="ff_interwarehouse_settings">
+                        <setting id="ff_enable_auto_setup" string="Automatic Warehouse Setup"
+                                 help="Automatically discover warehouses and create the missing inter-warehouse lanes and operation types (idempotent).">
+                            <field name="ff_enable_auto_setup"/>
+                        </setting>
+                        <setting id="ff_auto_create_lanes" string="Auto-create Lanes for New Warehouses"
+                                 help="When a new warehouse is created, automatically create its lanes with every other warehouse of the same company.">
+                            <field name="ff_auto_create_lanes"/>
+                        </setting>
+                        <setting id="ff_partial_receipt_notifications" string="Partial Receipt Notifications"
+                                 help="Send a chatter message and an activity to the initiator when a receipt is partial.">
+                            <field name="ff_enable_partial_receipt_notifications"/>
+                        </setting>
+                        <setting id="ff_require_partial_reason" string="Require Partial Receipt Reason"
+                                 help="When enabled, a reason must be provided before saving the partial receipt reason wizard.">
+                            <field name="ff_require_partial_receipt_reason"/>
+                        </setting>
+                        <setting id="ff_notify_destination" string="Notify Destination Warehouse"
+                                 help="Send an activity to the destination warehouse responsible users after a dispatch.">
+                            <field name="ff_notify_destination"/>
+                        </setting>
+                        <setting id="ff_notify_source_responsible" string="Notify Source Responsible"
+                                 help="Send an activity to the source responsible users on completion.">
+                            <field name="ff_notify_source_responsible"/>
+                        </setting>
+                    </block>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
